@@ -9,7 +9,7 @@ void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int))
 {
 	binary_tree_t *right = NULL, *tree_t = (binary_tree_t *)tree;
 
-	if (tree_t == NULL)
+	if (tree_t == NULL || func == NULL)
 		return;
 	(*func)(tree_t->n);
 	while (tree_t->left != NULL)
@@ -29,7 +29,7 @@ void binary_tree_preorder(const binary_tree_t *tree, void (*func)(int))
 		right = tree_t->right;
 		(*func)(right->n);
 		if (right->left)
-			(*func)((right->left)->n);
+			(*func)(right->left->n);
 		tree_t = right;
 	}
 }
