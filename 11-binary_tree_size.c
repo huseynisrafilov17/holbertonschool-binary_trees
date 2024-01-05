@@ -10,7 +10,7 @@ size_t binary_tree_size(const binary_tree_t *tree)
 	unsigned int i = 0, j = 0;
 
 	if (tree == NULL)
-		return (i + j);
+		return (0);
 	i = binary_tree_size(tree->left);
 	j = binary_tree_size(tree->right);
 	return (i + j + 1);
