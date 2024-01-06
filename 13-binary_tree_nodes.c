@@ -1,9 +1,9 @@
 #include "binary_trees.h"
 #include <stdlib.h>
 /**
- * binary_tree_height - calculates height of tree.
+ * binary_tree_nodes - counts the nodes with at least 1 child in a binary tree.
  * @tree: pointer to the node.
- * Return: Height.
+ * Return: count of nodes.
  */
 size_t binary_tree_nodes(const binary_tree_t *tree)
 {
